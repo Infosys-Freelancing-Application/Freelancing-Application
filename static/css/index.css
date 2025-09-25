@@ -1,0 +1,70 @@
+/* Navbar lighting theme */
+.custom-navbar {
+  background: linear-gradient(90deg, #e6fff7 0%, #ebedff 100%);
+  box-shadow: 0 4px 24px rgba(64,168,255,0.10);
+  border-bottom: 1.5px solid #40a8ff;
+}
+.custom-navbar .navbar-brand .logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg,#40a8ff,#0bb7d8);
+  box-shadow: 0 4px 12px rgba(64,168,255,0.18);
+  display: inline-block;
+}
+.custom-navbar .nav-link {
+  font-weight: 500;
+  color: #0ea5ff !important;
+  margin-left: 12px;
+  transition: color 0.2s;
+}
+.custom-navbar .nav-link:hover {
+  color: #0056b3 !important;
+}
+
+/* Animated underline on hover for nav links */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.2s;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: #40a8ff;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    transform-origin: left;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #40a8ff;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+    transform: scaleX(1);
+}
+
+/* Button press animation */
+.navbar-nav .nav-link:active {
+    transform: scale(0.96);
+    transition: transform 0.1s;
+}
+
+/* Profile icon animation */
+.navbar-nav .fa-user-circle {
+    transition: color 0.2s, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover .fa-user-circle,
+.navbar-nav .nav-link:focus .fa-user-circle {
+    color: #40a8ff;
+    transform: scale(1.15) rotate(-8deg);
+}
